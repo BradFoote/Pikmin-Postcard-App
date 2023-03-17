@@ -2,20 +2,27 @@
 <div class="container">
   <div class="row justify-content-center mt-5">
     <div class="col-6">
-      <h2><%= post.title %></h2>
-      <img class="img-fluid" src="<%= post.image%>" />
+      <h2><%= postcard.title %></h2>
+      <img class="img-fluid" src="<%= postcard.image%>" />
       <div class="row justify-content-between">
         <form
           class="col-1"
-          action="/post/likePost/<%= post.id %>?_method=PUT"
+          action="/postcard/likePostcard/<%= postcard.id %>?_method=PUT"
           method="POST"
         >
           <button class="btn btn-primary fa fa-heart" type="submit"></button>
         </form>
-        <h3 class="col-3">Likes: <%= post.likes %></h3>
-        <%if(post.user == user.id){ %>
         <form
-          action="/post/deletePost/<%= post.id %>?_method=DELETE"
+          class="col-1"
+          action="/postcard/favoritePostcard/<%= postcard.id %>"
+          method="POST"
+        >
+          <button class="btn btn-primary fa fa-star" type="submit"></button>
+        </form>
+        <h3 class="col-3">Likes: <%= postcard.likes %></h3>
+        <%if(postcard.user == user.id){ %>
+        <form
+          action="/postcard/deletePostcard/<%= postcard.id %>?_method=DELETE"
           method="POST"
           class="col-3"
         >
@@ -25,7 +32,7 @@
       </div>
     </div>
     <div class="col-3 mt-5">
-      <p><%= post.caption %></p>
+      <p><%= postcard.caption %></p>
     </div>
 
     <div class="col-6 mt-5">

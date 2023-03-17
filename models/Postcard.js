@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const PostSchema = new mongoose.Schema({
+const PostcardSchema = new mongoose.Schema({
   image: {
     type: String,
     require: true,
@@ -28,4 +28,4 @@ const PostSchema = new mongoose.Schema({
 });
 
 //MongoDB Collection named here - will give lowercase plural of name 
-module.exports = mongoose.model("Post", PostSchema);
+module.exports = mongoose.model("Postcard", PostcardSchema);
