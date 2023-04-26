@@ -55,6 +55,7 @@ module.exports = {
         // image: result.secure_url,
         // cloudinaryId: result.public_id,
         // leaving it as caption only but can come back if I need it delete if cleaning
+        //possibly add in thumbnail to see previews of the favorites
         caption: req.body.caption,
 
       });

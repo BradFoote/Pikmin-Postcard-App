@@ -12,10 +12,10 @@ router.get("/:id", ensureAuth, postcardsController.getPostcard);
 //Enables user to create post w/ cloudinary for media uploads
 router.post("/createPostcard", upload.single("file"), postcardsController.createPostcard);
 
+router.post("/favoritePostcard/:id", postcardsController.favoritePostcard);
+
 //Enables user to like post. In controller, uses POST model to update likes by 1
 router.put("/likePostcard/:id", postcardsController.likePostcard);
-
-router.post("/favoritePostcard/:id", postcardsController.favoritePostcard);
 
 //Enables user to delete post. In controller, uses POST model to delete post from MongoDB collection
 router.delete("/deletePostcard/:id", postcardsController.deletePostcard);
