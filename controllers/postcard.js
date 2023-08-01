@@ -1,6 +1,6 @@
 const cloudinary = require("../middleware/cloudinary");
 const Postcard = require("../models/Postcard");
-const Favorite = require("../models/Favorite");
+const Favorite = require("../models/favorite");
 
 module.exports = {
   getProfile: async (req, res) => { 
@@ -62,14 +62,16 @@ module.exports = {
   },
   favoritePostcard: async (req, res) => {
     try {
-      //media is stored on cloudainary - the above request responds with url to media and the media id that you will need when deleting content 
+      //media is stored on cloudainary - the above request responds with url to media and the media id that 
+      //you will need when deleting content 
       await Favorite.create({
         user: req.user.id,
         // image: result.secure_url,
         // cloudinaryId: result.public_id,
         // leaving it as caption only but can come back if I need it delete if cleaning
         //possibly add in thumbnail to see previews of the favorites
-        caption: req.body.caption,
+        postcard: req.body.id,
+        //altering this to see if it fixes things
 
       });
       console.log("Favorite postcard has been added!");
