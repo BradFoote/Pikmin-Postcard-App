@@ -1,6 +1,6 @@
 const cloudinary = require("../middleware/cloudinary");
 const Postcard = require("../models/Postcard");
-const Favorite = require("../models/favorite");
+const Favorite = require("../models/Favorite");
 
 module.exports = {
   getProfile: async (req, res) => { 

@@ -19,6 +19,10 @@ const FavoriteSchema = new mongoose.Schema({
     type: mongoose.Schema.Types.ObjectId,
     ref: "User",
   },
+  postcard: {
+    type: String,
+    ref: "Postcard",
+  },
   createdAt: {
     type: Date,
     default: Date.now,
@@ -26,4 +30,4 @@ const FavoriteSchema = new mongoose.Schema({
 });
 
 //MongoDB Collection named here - will give lowercase plural of name 
-module.exports = mongoose.model("favorite", FavoriteSchema);
+module.exports = mongoose.model("Favorite", FavoriteSchema);
