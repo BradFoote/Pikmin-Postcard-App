@@ -1,7 +1,7 @@
 const cloudinary = require("../middleware/cloudinary");
 const Postcard = require("../models/Postcard");
-const Favorite = require("../models/Favorite");
-
+const Favorite = require("../models/favorite");
+//not sure why but vscode doesnt want me to capitalize Favorite here
 module.exports = {
   getProfile: async (req, res) => { 
     console.log(req.user)
@@ -22,12 +22,15 @@ module.exports = {
       //Since we have a session each request (req) contains the logged-in users info: req.user
       //console.log(req.user) to see everything
       //Grabbing just the posts of the logged-in user
-      const postcards = await Postcard.find({ user: req.user.id });
+      const postcards = await Favorite.find({ user: req.user.id }).populate('postcard');
+
+      console.log(Favorite)
+      
       //Sending post data from mongodb and user data to ejs template
       res.render("favorites.ejs", { postcards: postcards, user: req.user });
     } catch (err) {
       console.log(err);
-    }
+    }//I fucked something up here
   },
   getPostcard: async (req, res) => {
     try {
