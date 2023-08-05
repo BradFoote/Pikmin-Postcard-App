@@ -30,7 +30,7 @@ module.exports = {
       res.render("favorites.ejs", { postcards: postcards, user: req.user });
     } catch (err) {
       console.log(err);
-    }//I fucked something up here
+    }//I fucked something up here maybe I fixed it?
   },
   getPostcard: async (req, res) => {
     try {
