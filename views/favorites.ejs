@@ -12,9 +12,9 @@
         <ul class="row list-unstyled">
         <% for(var i=0; i<postcards.length; i++) {%>
           <li class="col-6 justify-content-between mt-5">
-            <a href="/postcard/<%= postcards[i].postcard._id%>">
-              <h2><%= postcards[i].postcard.caption%></h2> 
-              <img class="img-fluid" src="<%= postcards[i].postcard.image%>">
+            <a href="/postcard/<%= postcards[i]._id%>">
+              <h2><%= postcards[i].caption%></h2> 
+              <img class="img-fluid" src="<%= postcards[i].image%>">
               <!-- maybe add in like totals here? 11:30:02 -->
             </a>
           </li>

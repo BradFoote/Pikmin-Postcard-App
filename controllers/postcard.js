@@ -23,9 +23,8 @@ module.exports = {
       //console.log(req.user) to see everything
       //Grabbing just the posts of the logged-in user
       const postcards = await Favorite.find({ user: req.user.id }).populate('postcard');
-
-      console.log(Favorite)
       
+      console.log(postcards)
       //Sending post data from mongodb and user data to ejs template
       res.render("favorites.ejs", { postcards: postcards, user: req.user });
     } catch (err) {
