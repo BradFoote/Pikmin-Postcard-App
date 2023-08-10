@@ -1,27 +1,13 @@
 const mongoose = require("mongoose");
 
 const FavoriteSchema = new mongoose.Schema({
-//   image: {
-//     type: String,
-//     require: true,
-//   },
-//   cloudinaryId: {
-//     type: String,
-//     require: true,
-//   },
-//saving for possible future use. delete if cleaning
-  // caption: {
-  //   type: mongoose.Schema.Types.ObjectId,
-  //   ref: "Postcard",
-  // },
-//if there's a problem it's probably here ^ doesn't need a caption i think? Or is this bringing caption from the og post?
+  postcard: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "Postcard"
+},
   user: {
     type: mongoose.Schema.Types.ObjectId,
     ref: "User",
-  },
-  postcard: {
-    type: String,
-    ref: "Postcard",
   },
   createdAt: {
     type: Date,

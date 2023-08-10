@@ -25,11 +25,12 @@ module.exports = {
       const postcards = await Favorite.find({ user: req.user.id }).populate('postcard');
       
       console.log(postcards)
+      
       //Sending post data from mongodb and user data to ejs template
       res.render("favorites.ejs", { postcards: postcards, user: req.user });
     } catch (err) {
       console.log(err);
-    }//I fucked something up here maybe I fixed it?
+    }
   },
   getPostcard: async (req, res) => {
     try {
@@ -72,7 +73,7 @@ module.exports = {
         // cloudinaryId: result.public_id,
         // leaving it as caption only but can come back if I need it delete if cleaning
         //possibly add in thumbnail to see previews of the favorites
-        postcard: req.body.id,
+        postcard: req.params.id,
         //altering this to see if it fixes things
 
       });
