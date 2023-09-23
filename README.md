@@ -1,4 +1,3 @@
-My Awesome Project
 I'm a Pikmin Bloom enthusiast and I created this site to allow people to share their awesome postcards in a easier to view way. This site also allows players to hold onto their most prized postcard images while being able to share them with their friends in game.
 
 Link to project: http://recruiters-love-seeing-live-demos.com/
@@ -26,3 +25,11 @@ Palettable: https://github.com/alecortega/palettable
 Twitter Battle: https://github.com/alecortega/twitter-battle
 
 Patch Panel: https://github.com/alecortega/patch-panel
+
+Future plans for the site:
+DESIGTN FOR MOBILE  
+1. Implement a newsfeed so people can see other postcards. Maybe just do newest on top?
+2. make it so you can only like and favorite something once. somehow make it toglable so you can get rid of a like or favorite.
+3. Make a profile page that others can see and the user can show off their 5 most favorite postards and maybe favorite pikmin color?
+4. Put the disclaimer on the bottom of the screen
+5. overhaul the mypage section to show 10 ish postcards posted in mini images with an arrow that shows the next 10 from earliest to latest. 
