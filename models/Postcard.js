@@ -31,5 +31,5 @@ const PostcardSchema = new mongoose.Schema({
 module.exports = mongoose.model("Postcard", PostcardSchema);
 
 
-//want to create a feed from the postcard section that viewers can like and share or save to their portfolio. Also add some sort fo favorite
+//want to create a feed from the postcard section that viewers can like and share or save to their portfolio. Also add some sort of favorite
 //section that can be displayed on each profile.
