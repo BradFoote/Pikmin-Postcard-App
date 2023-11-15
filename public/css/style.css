@@ -3,4 +3,9 @@ span{
     justify-content: center;
     align-items: flex-end;
 }
-/* is this a class? */
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
