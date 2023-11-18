@@ -1,4 +1,4 @@
-span{
+/* span{
     display: flex;
     justify-content: center;
     align-items: flex-end;
@@ -8,4 +8,12 @@ span{
     display: flex;
     justify-content: center;
     align-items: flex-end;
+} */
+.start{
+    display: grid;
+    place-items: center;
+}
+.disclaimer{
+    display: flex;
+    justify-content: center;
 }
